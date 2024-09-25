@@ -15,7 +15,7 @@ CORS(app)
 
 # Initialize the client
 try:
-    client = Client("OpenSound/EzAudio")
+    client = Client("OpenSound/EzAudio", use_websocket=False)
     logger.info("Gradio client initialized successfully")
 except Exception as e:
     logger.error(f"Failed to initialize Gradio client: {str(e)}", exc_info=True)
